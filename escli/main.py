@@ -165,7 +165,8 @@ class Escli(App):
                     cluster=cluster
                 )
 
-        self.context.settings = Box(self._config.settings)
+        if hasattr(self._config, 'settings') and self._config.settings is not None:
+            self.context.settings = Box(self._config.settings)
 
     def find_scheme(self):
         scheme = 'https'
