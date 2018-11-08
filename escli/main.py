@@ -194,7 +194,9 @@ class Escli(App):
             if username and password \
             else None
 
-        if self.context.settings.no_check_certificate:
+        if hasattr(self.context, 'settings') and \
+                'no_check_certificate' in self.context.settings and \
+                self.context.settings.no_check_certificate:
             with warnings.catch_warnings(record=True) as warning:
                 self.LOG.debug(warning)
                 Escli._es = elasticsearch.Elasticsearch(
