@@ -1,4 +1,6 @@
 # Escli 
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fwuha-team%2Fescli.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fwuha-team%2Fescli?ref=badge_shield)
+
 
 Escli is a CLI tool for Elasticsearch. It should prevent Elasticsearch operators to use huge `curl` commands with complex bodies like
 
@@ -45,6 +47,9 @@ default-context: foo
 
 `escli` is licensed under the GNU GPLv3. See [LICENCE]() file.
 
+
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fwuha-team%2Fescli.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fwuha-team%2Fescli?ref=badge_large)
 
 # Developing
 
