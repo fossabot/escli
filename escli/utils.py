@@ -175,7 +175,10 @@ class EscliLister(Lister):
         parsed_args = self._run_before_hooks(parsed_args)
         self.formatter = self._formatter_plugins[parsed_args.formatter].obj
         column_names, data = self.take_action(parsed_args)
-        data = self.get_by_attribute_name(parsed_args.attribute, data)
+
+        if 'attribute' in parsed_args and parsed_args.attribute is not None:
+            data = self.get_by_attribute_name(parsed_args.attribute, data)
+
         column_names, data = self._run_after_hooks(parsed_args,
                                                    (column_names, data))
         self.produce_output(parsed_args, column_names, data)
